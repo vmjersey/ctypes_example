@@ -4,7 +4,7 @@
 ## How to use this library
 
    1.  Proceeduraly 
-'''
+'''python
 import smacky
 
 lib = write_file/libwrite_file.so
