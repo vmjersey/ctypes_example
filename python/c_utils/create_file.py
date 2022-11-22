@@ -10,9 +10,9 @@ class create_file():
         ''' 
             Set up all the necessary items for a new file
         '''
-        self.c_lib = cdll.LoadLibrary(filename)
+        self.c_lib = cdll.LoadLibrary("/home/james/ctypes_example/build/write_file/libwrite_file.so")
         self.c_lib.init_file.restype = POINTER(c_void_p)
-        self.wr = self.c_lib.init_file(max_buffer_size)
+        self.wr = self.c_lib.init_file(filename.encode(),max_buffer_size)
 
     def process_list(self,L):
         ''' 

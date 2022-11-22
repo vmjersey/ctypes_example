@@ -10,10 +10,10 @@ struct wrtype{
         int max_buffer;
 } wrtype;
 
-struct wrtype *init_file(int max_buffer){
+struct wrtype *init_file(char *filename,int max_buffer){
 
 	struct wrtype *wr = malloc(sizeof(wrtype));
-	wr->fh = fopen("blah.txt","a");
+	wr->fh = fopen(filename,"a");
         wr->max_buffer = max_buffer;
         wr->words = malloc(wr->max_buffer*sizeof(char*));
 	//Initiallize all of the words
