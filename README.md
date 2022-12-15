@@ -1,23 +1,28 @@
 # ctypes_example
 
+## Project Structure
 
-## How to use this library
+   * examples:  Directory with simple python scripts to show how the python package is used.
+   * python:  Directory with the c_utils package.  
+   * write_file: Example shared library for writing a simple text file.
 
-   1.  Proceeduraly 
-```
-import smacky
-
-lib = write_file/libwrite_file.so
-f = smacky.create_file(lib)
+## Install Python Package
 
 
-words = ["I","do","not","like","green"]
-f.dump(words)
-words = ["eggs","and","ham","."]
-f.dump(words)
-wrds = ["I","do","not","like","them","sam","I","am","."]
-f.dump(words)
+'''
+	% cd python
+	% pip install . 
+'''
 
-f.finalize()
-```
-                
+## Install Shared Library
+
+'''
+	% mkdir build
+ 	% cd build
+	% cmake ..
+	% make
+	% make install
+'''
+
+
+

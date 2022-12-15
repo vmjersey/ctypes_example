@@ -6,11 +6,11 @@ from ctypes import cdll,c_void_p,c_int,c_char_p,Structure,byref,POINTER
 
 class create_file():
 
-    def __init__(self,filename,max_buffer_size=10):
+    def __init__(self,filename,max_buffer_size=10,library="/usr/local/lib/libwrite_file.so"):
         ''' 
             Set up all the necessary items for a new file
         '''
-        self.c_lib = cdll.LoadLibrary("/home/james/ctypes_example/build/write_file/libwrite_file.so")
+        self.c_lib = cdll.LoadLibrary(library)
         self.c_lib.init_file.restype = POINTER(c_void_p)
         self.wr = self.c_lib.init_file(filename.encode(),max_buffer_size)
 
