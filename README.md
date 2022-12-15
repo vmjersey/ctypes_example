@@ -9,20 +9,20 @@
 ## Install Python Package
 
 
-'''
+```
 	% cd python
 	% pip install . 
-'''
+```
 
 ## Install Shared Library
 
-'''
+```
 	% mkdir build
  	% cd build
 	% cmake ..
 	% make
 	% make install
-'''
+```
 
 
 
