@@ -1,8 +1,4 @@
-import os
-import sys
-from ctypes import cdll,c_void_p,c_int,c_double,c_char_p,Structure,byref,POINTER,CFUNCTYPE
-import ctypes
-import statistics
+from ctypes import CDLL,POINTER,byref,c_double,c_int
 
 class lapack():
 
@@ -10,7 +6,7 @@ class lapack():
         ''' 
             Load Lapack library
         '''
-        self.c_lib = ctypes.CDLL('/usr/lib64/liblapack.so.3')
+        self.c_lib = CDLL('/usr/lib64/liblapack.so.3')
 
     def process_list(self,L,dtype):
         ''' 
